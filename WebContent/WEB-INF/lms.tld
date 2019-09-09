@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+version="2.1">
+	<tlib-version>1.0</tlib-version>
+	<short-name>lms</short-name>
+	<uri>/lms-tags</uri>
+	<tag>
+		<description>分页</description>
+		<name>page</name>
+		<tag-class>Bean.tag.PageTag</tag-class>
+		<body-content>JSP</body-content>
+		<attribute>
+			<description>PageObject</description>
+			<name>object</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>Bean.Tag.PageObject</type>
+		</attribute>
+		<attribute>
+			<description>转向URL如：fileQuery.jsp?guid=123456</description>
+			<name>token</name>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>onclick的js function 如：doSubmit, 必须带一个参数pageNo(要转向的页面)</description>
+			<name>script</name>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+
